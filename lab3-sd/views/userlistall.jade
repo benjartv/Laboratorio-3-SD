@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1.
+        Lista de Alumnos en el sistema
+    ul
+        each user, i in userlist
+            li
+                a(href="")= user.name
+        each user2, j in userlist2
+            li
+                a(href="")= user2.name
+        each user3, x in userlist3
+            li
+                a(href="")= user3.name

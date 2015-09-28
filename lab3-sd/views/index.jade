@@ -1,0 +1,63 @@
+extends layout
+
+block content
+    h1= title
+    p Laboratorio Nº3 Sistemas Distribuidos
+    #wrapper
+
+        // USER INFO
+        #userInfo
+            h2 Información Alumno
+            p
+                strong RUT:
+                |  <span id='userInfoRut'></span>
+                br
+                strong Nombre:
+                |  <span id='userInfoName'></span>
+                br
+                strong Apellido:
+                |  <span id='userInfoLast'></span>
+                br
+                strong Institucion:
+                |  <span id='userInfoInstitucion'></span>
+            p
+                // ADD USER
+                h2 Agregar Alumnos
+                #addUser
+                    fieldset
+                        input#inputUserName(type='text', placeholder='Nombre')
+                        input#inputUserLast(type='text', placeholder='Apellido')
+                        br
+                        input#inputUserRut(type='text', placeholder='Rut')
+                        input#inputUserInstitucion(type='text', placeholder='Institucion')
+                        br
+                        button#btnAddUser Agregar Alumno
+                // /ADD USER
+            h2 Consultas
+            #searchInstitucion
+                fieldset
+                    input#inputSearchInstitucion(type='text', placeholder='Institucion')
+                    br
+                    button#btnSearchU Buscar Institucion
+                    br
+            p
+            h2 Table por defecto
+            #rebootTable
+                fieldset
+                    button#btnReboot Reiniciar Tabla
+
+        // /USER INFO
+
+
+        // USER LIST
+        h2 Lista de Alumnos
+        #userList
+            table
+                thead
+                    th RUT
+                    th Nombre
+                    th Institución
+                tbody
+        // /USER LIST
+
+        

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1= title
+    form#formAddUser(name="adduser",method="post",action="/adduser")
+        input#inputUserRut(type="text", placeholder="rut", name="rut")
+        br
+        input#inputUserName(type="text", placeholder="nombre", name="nombre")
+        br
+        input#inputUserLastName(type="text", placeholder="apellido", name="apellido")
+        br
+        input#inputUserInstitucion(type="text", placeholder="institucion", name="institucion")
+        br
+        button#btnSubmit(type="submit") submit
